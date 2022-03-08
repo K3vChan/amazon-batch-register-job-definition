@@ -32,7 +32,7 @@ To insert the image URI `amazon/amazon-batch-sample:latest` as the image in the 
         image: amazon/amazon-batch-sample:latest
 
     - name: Register with Amazon Batch service
-      uses: K3vChan/amazon-batch-register-job-definition@v1
+      uses: K3vChan/amazon-batch-register-job-definition@v1.0.0
       with:
         job-definition: ${{ steps.render-job-def.outputs.job-definition }}
 ```
