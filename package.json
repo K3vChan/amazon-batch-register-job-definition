@@ -1,0 +1,30 @@
+{
+  "name": "amazon-batch-register-job-definition",
+  "version": "1.0.0",
+  "description": "Github action to register a batch job definition",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint **.js",
+    "test": "eslint **.js && jest --coverage",
+    "package": "ncc build index.js -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k3vChan/amazon-batch-register-job-definition.git"
+  },
+  "author": "Kevin Chan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/k3vChan/amazon-batch-register-job-definition/issues"
+  },
+  "homepage": "https://github.com/k3vChan/amazon-batch-register-job-definition#readme",
+  "dependencies": {
+    "@actions/core": "^1.3.0",
+    "@vercel/ncc": "^0.28.6",
+    "aws-sdk": "^2.920.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "jest": "^27.0.4"
+  }
+}

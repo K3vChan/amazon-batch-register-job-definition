@@ -1,0 +1,19 @@
+name: 'Amazon Batch "Register Job Definition" Action for GitHub Actions'
+description: "Registers a job definition in file with AWS Batch"
+branding:
+  icon: "cloud"
+  color: "green"
+inputs:
+  job-definition:
+    description: "The path to the Batch job definition JSON file"
+    required: true
+outputs:
+  job-definition-name:
+    description: "The name of the job definition"
+  job-definition-arn:
+    description: "The ARN of the job definition"
+  revision:
+    description: "The revision number of the job definition"
+runs:
+  using: "node12"
+  main: "dist/index.js"
