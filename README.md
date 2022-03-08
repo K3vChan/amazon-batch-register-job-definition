@@ -18,9 +18,15 @@ Creates a new batch job given a batch job definition
 To insert the image URI `amazon/amazon-batch-sample:latest` as the image in the job definition file, and then register the edited task definition file to AWS batch:
 
 ```yaml
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.AWS_ACCESS_SECRET }}
+        aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
     - name: Render Amazon Batch job definition
       id: render-job-def
-      uses: K3vChan/amazon-batch-render-job-definition@v1
+      uses: jon-evergreen/amazon-batch-render-job-definition@v1.0.1
       with:
         task-definition: job-definition.json
         image: amazon/amazon-batch-sample:latest
